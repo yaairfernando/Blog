@@ -1,0 +1,15 @@
+
+<% if obj.errors.any? %> 
+  <div class="ui message transition hidden">
+    <i class="close icon"></i>
+    <div class="header">
+      <p><%= pluralize(obj.errors.count, "error") %></p>
+      prevented this article for being created
+      <ul>
+        <% obj.errors.full_messages.each do |error| %>
+          <li><%= error %></li>
+        <% end %> 
+      </ul>
+    </div>
+  </div>
+<% end %>

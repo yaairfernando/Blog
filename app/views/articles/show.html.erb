@@ -1,0 +1,29 @@
+<div class="container segment">
+
+  <div class="ui raised cards container text very padded">
+      <div class="card">
+        <div class="content">
+          <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+          <div class="header">
+            <%= @article.title %>
+          </div>
+          <div class="meta">
+            Yair Fernando
+          </div>
+          <div class="description">
+            <%= @article.description %>
+          </div>
+        </div>
+        <div class="extra content">
+            <div class="ui three buttons">
+                <%= link_to "Edit", edit_article_path(@article), class:"ui basic green button" %>
+                <%= link_to "All Articles", root_path, class:"ui basic green button" %>
+                <%= link_to "Delete", article_path, method: :delete, data: { confirm: "Are you sure?"}, class:"ui basic red button" %>
+              </div>
+         
+        </div>
+      </div>
+     
+    </div>
+</div>
+  
