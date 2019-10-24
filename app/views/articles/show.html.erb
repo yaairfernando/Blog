@@ -19,11 +19,22 @@
                 <%= link_to "Edit", edit_article_path(@article), class:"ui basic green button" %>
                 <%= link_to "All Articles", root_path, class:"ui basic green button" %>
                 <%= link_to "Delete", article_path, method: :delete, data: { confirm: "Are you sure?"}, class:"ui basic red button" %>
-              </div>
-         
+            </div>
+        </div>
+        <div class="ui comments padd">
+          <h3 class="ui dividing header">Comments</h3>
+
+          <strong>
+            <%= @article.comments.count %>
+          </strong>
+          Comments
+          <%= render @article.comments %>
+          <%= render 'comments/form' %>
+
         </div>
       </div>
-     
     </div>
 </div>
+
+
   
