@@ -1,0 +1,13 @@
+
+<%= render 'shared/errors', obj: @article %>
+<%= simple_form_for @article, html: { class: "ui form container segment ui raised very padded text"} do |f| %>
+
+    <div class="field">
+      <%= f.input :title, input_html: { class: "input"}, label_html: { class: "label"}, autofocus: true, wrapper: false, placeholder:"Title" %>
+    </div>
+    <div class="field">
+      <%= f.input :description, input_html: { class: "textarea"}, label_html: { class:"label"}, wrapper: false, placeholder:"Description" %>
+    </div>
+    <%= f.submit class: "ui blue button" %>
+
+<% end %>
